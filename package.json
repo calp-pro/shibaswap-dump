@@ -23,5 +23,8 @@
   },
   "dependencies": {
     "uniswap-v2-loader": "^5.0.20"
+  },
+  "publishConfig": {
+    "provenance": true
   }
 }
