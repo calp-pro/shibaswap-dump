@@ -6,15 +6,24 @@ Static set of addresses (ShibaSwap Ethereum mainnet).<br>
 New pairs updates happen every hour at GitHub Action [update.yml](https://github.com/calp-pro/uniswap-v2-dump/actions/workflows/update.yml)<br>
 via [uniswap-v2-loader](https://github.com/calp-pro/uniswap-v2-loader)
 
-Data: `dump.csv` 135Kb+ 
+Data:
+- `dump_pairs.bin` 21 Kb+ 
+- `dump_tokens.bin` 17 Kb+
+- `dump_p2tt.bin` 6 Kb+
 
-CSV schema: `id,pair,token0,token1`
-
-## Example:
-```
-...
-10,0x4200b824d4b1118e290767a9f255d53af21fabca,0x6b175474e89094c44da98b954eedeac495271d0f,0x9813037ee2218799597d83d4a5b6f3b6778218d9
-...
+## Output format
+`load` and subscribe` methods return collection of pools/pairs.
+```js
+[
+    ...
+    {
+        id: 10,
+        pair: '0x4200b824d4b1118e290767a9f255d53af21fabca',
+        token0: '0x6b175474e89094c44da98b954eedeac495271d0f',
+        token1: '0x9813037ee2218799597d83d4a5b6f3b6778218d9'
+    },
+    ...
+]
 ```
 where:
 - `10`
